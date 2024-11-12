@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - Podify</title>
+  <link rel="stylesheet" href="features.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="features.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li style="float: left; margin-right: auto;">
+                <a href="#">
+                  <img src="/images/logo.png" alt="Company Logo" class="nav-logo">
+                </a>
+            </li>            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="episode.html">Episodes</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+               <button id="button">Become a Podcaster</button>
+            </li>
+        </ul>
+      </nav>
+
+
+  <!-- Dark Background Section -->
+  <section class="active-podcasters">
+    <canvas class="background"></canvas>
+    <h1>This Week's Most Active Podcasters</h1>
+    <div class="podcasters-scroll">
+      <div class="podcaster">
+        <img src="/images/john.jpg" alt="Podcaster 1">
+        <p>JOHN ALIEV</p>
+      </div>
+      <div class="podcaster">
+        <img src="/images/emilia.jpg" alt="Podcaster 2">
+        <p>EMILIA DARK</p>
+      </div>
+      <div class="podcaster">
+        <img src="/images/alex.jpg" alt="Podcaster 3">
+        <p>ALEX WONK</p>
+      </div>
+      <div class="podcaster">
+        <img src="/images/theo.jpg" alt="Podcaster 4">
+        <p>THEO PRINCE</p>
+      </div>
+      <div class="podcaster">
+        <img src="/images/patricia.jpg" alt="Podcaster 5">
+        <p>PATRICIA EMILTON</p>
+      </div>
+   
+    </div>
+  </section>
+
+  <!-- White Background Section -->
+  <section class="recent-releases">
+     <h2>Recent Releases</h2>
+     <div class="categories">
+       <span>Business & Finance</span>
+       <span>Mental Health</span>
+       <span>Education</span>
+       <span>Productivity & Motivation</span>
+       <span>Creativity & Design</span>
+       <span>Fashion & Style</span>
+       <span>Personal Growth</span>
+       <span>Relationship & Lifestyle</span>
+      </div>
+ 
+      <div class="episodes">
+        <div class="episode-card">
+          <img src="/images/black.jpg" alt="Episode 1">
+          <h3>Smart Money Decisions</h3>
+          <p>Andrew Summer - Sep 24, 2024</p>
+          <a href="#"><i class="fa-solid fa-circle-play"></i></a>
+        </div>
+        <div class="episode-card">
+          <img src="/images/vlada.jpg" alt="Episode 2">
+          <h3>Deep Dives into Modern Life</h3>
+          <p>Lily Beck - Sep 24, 2024</p>
+          <a href="#"><i class="fa-solid fa-circle-play"></i></a>
+        </div>
+        <div class="episode-card">
+          <img src="/images/lady.jpg" alt="Episode 2">
+          <h3>Real Talk with Game Changers</h3>
+          <p>Mark Spilberg - Sep 23, 2024</p>
+          <a href="#"><i class="fa-solid fa-circle-play"></i></a>
+        </div>  
+     </div>
+
+     
+   <!-- Popup Form -->
+   <div id="podcaster-form" class="form-popup">
+    <div class="form-container">
+        <h2>Become a Podcaster</h2>
+        <form id="podcaster-form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="telephone" placeholder="Telephone" required>
+            <textarea name="address" placeholder="Address" required></textarea>
+            <button type="submit" class="sub-btn">Submit</button>
+            <button type="button" class="close-btn">Close</button>
+        </form>
+    </div>
+</div>
+
+  </section>
+  <script src="/particles.js-master/particles.js-master/dist/particles.min.js"></script>
+</body>
+<script src="features.js"></script>
+</html>

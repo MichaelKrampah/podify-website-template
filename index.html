@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Podify - Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="float: left; margin-right: auto;">
+                <a href="#">
+                  <img src="/images/logo.png" alt="Company Logo" class="nav-logo">
+                </a>
+            </li>            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="episode.html">Episodes</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+               <button id="button">Become a Podcaster</button>
+            </li>
+        </ul>
+      </nav>
+
+        
+  <section id="land-page">
+    <h1>Podcast Your Experience</h1>
+
+   <div id="glass-containers">
+     <div class="listen-now">
+      <h2>Ready to dive into captivating stories and and insights?</h2>
+      <img src="/images/wave.png" alt="wave">
+      <h2>
+        LISTEN NOW
+        <a href="https://open.spotify.com/"><i class="fa-brands fa-spotify"></i> </a>
+        <a href="https://music.apple.com/us/new"><i class="fa-solid fa-music"></i></a>
+        <a href="https://podcasts.apple.com/us/browse"><i class="fa-solid fa-podcast"></i></a>
+      </h2>
+     </div>
+
+     <div class="stats">
+
+       <div class="listeners">
+        <h2>2M </h2>
+        <p>Listeners</p>
+       </div>
+
+       <div class="episodes">
+        <h2>7M</h2>
+        <p>Episodes Streamed</p>
+       </div>
+
+       <div class="creators">
+        <h2>900K</h2>
+        <p>Creators</p>
+       </div>
+
+       <div class="daily">
+        <h2>650K</h2>
+        <p>Episodes Daily</p>
+       </div>
+    </div>
+
+    <div class="back-img">
+      <img src="/images/girl-pod.png" alt="back-image">
+    </div>
+  </div> 
+
+  
+   <!-- Popup Form -->
+   <div id="podcaster-form" class="form-popup">
+    <div class="form-container">
+        <h2>Become a Podcaster</h2>
+        <form id="podcaster-form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="telephone" placeholder="Telephone" required>
+            <textarea name="address" placeholder="Address" required></textarea>
+            <button type="submit" class="sub-btn">Submit</button>
+            <button type="button" class="close-btn">Close</button>
+        </form>
+    </div>
+</div>
+
+   
+  </section>
+  <canvas class="background"></canvas>
+  <script src="/particles.js-master/particles.js-master/dist/particles.min.js"></script>
+</body>
+<script src="script.js"></script>
+</html>

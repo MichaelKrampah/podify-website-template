@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Episodea - Podify</title>
+  <link rel="stylesheet" href="episode.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="float: left; margin-right: auto;">
+                <a href="#">
+                  <img src="/images/logo-2.png" alt="Company Logo" class="nav-logo">
+                </a>
+            </li>            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="episode.html">Episodes</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+               <button id="button">Become a Podcaster</button>
+            </li>
+        </ul>
+      </nav>
+
+  <div class="container">
+    <h1>This Week's Most Popular Episode</h1>
+
+    <div class="episode">
+      <div class="episode-item">
+        <img src="/images/woman.jpg" alt="Insight into Human Behavior and Well-being">
+        <div class="episode-content">
+          <p class="author-date">
+            <span>Rabel Wonk</span>
+            <span>SEP 25, 2024</span>
+          </p>
+          <h2>Insights into Human Behavior and Well-being</h2>
+          <p class="description">Delve into the fascinating world of psychology as we explore the complexities of human behavior, emotions, and mental well-being...</p>
+          <a href="#" class="explore-link">Explore Now →</a>
+        </div>
+      </div>
+
+      <div class="episode-item">
+        <img src="/images/tilted-head-man.jpg" alt="Unraveling the Human Experience">
+        <div class="episode-content">
+          <p class="author-date">
+            <span>Liam Davies</span>
+            <span>SEP 25, 2024</span>
+          </p>
+          <h2>Unraveling the Human Experience</h2>
+          <p class="description">The Human Experience is a global phenomenon... science, philosophy, art, and personal stories collide to explore what it means to be human in the 21st century.</p>
+          <a href="#" class="explore-link">Explore Now →</a>
+        </div>
+      </div>
+
+      <div class="episode-item">
+        <img src="/images/smiley-male-musicians.jpg" alt="Unraveling the Human Experience">
+        <div class="episode-content">
+          <p class="author-date">
+            <span>By Mark Johnson</span>
+            <span>April 17, 2024</span>
+          </p>
+           <h2>Rhythm of Thought</h2> <p class="description">Exploring philosophical questions about existence, purpose, and human nature through the lens of music and conversation.</p>
+          <a href="#" class="explore-link">Explore Now →</a>
+        </div>
+      </div>
+    </div>
+
+  
+   <!-- Popup Form -->
+   <div id="podcaster-form" class="form-popup">
+    <div class="form-container">
+        <h2>Become a Podcaster</h2>
+        <form id="podcaster-form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="telephone" placeholder="Telephone" required>
+            <textarea name="address" placeholder="Address" required></textarea>
+            <button type="submit" class="sub-btn">Submit</button>
+            <button type="button" class="close-btn">Close</button>
+        </form>
+    </div>
+</div>
+  
+
+  </div>
+  <canvas class="background"></canvas>
+  <script src="/particles.js-master/particles.js-master/dist/particles.min.js"></script>
+</body>
+<script src="episode.js"></script>
+</html>
