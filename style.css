@@ -291,3 +291,164 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 
+
+/* Burger Menu Button */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    right: 40px;
+    z-index: 1000;
+    background: none;
+    border: none;
+    position: static;
+  
+  }
+  
+  .burger-menu i {
+    color:#f9f9f9;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .burger-menu.active i {
+    transform: rotate(90deg);
+  }
+  
+  
+
+  
+  /* Responsive Design */
+@media screen and (max-width: 480px) {
+    #land-page h1{
+        font-size: 3rem;
+    }
+
+  #glass-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between stacked elements */
+    width: 100%;
+    }
+
+
+  .listen-now, .stats, .back-img {
+    max-width: 80%; /* Reduce width for mobile screens */
+    margin: 0 auto; /* Center alignment */
+    }
+
+    .listen-now img{
+        max-width: 100%;    
+        height: auto;       
+        object-fit: cover;         
+        margin-top: 0;
+    }
+    
+
+
+    .back-img {
+        position: static; /* Reset positioning to fit flow */
+        transform: none; /* Remove any translation */
+        z-index: 0; /* Ensure it doesn't overlap */
+        margin: 0 auto; /* Center it horizontally */
+    }
+
+    .back-img img{
+        width: 100%;
+        height: auto;
+    }
+
+  .listen-now, .stats {
+    flex: none; /* Disable flex resizing for column stacking */
+    padding: 15px;
+    }
+
+  .stats > div {
+    flex: 1 1 100%; /* Ensure full width for stat items in mobile view */
+    }
+
+  .form-popup{
+    width: 70%;
+    }
+      
+}
+  
+  
+  @media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block !important;
+    }
+  
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 200px;
+        height: 100vh;
+        margin: 0;
+        padding-top: 100px;
+        padding-bottom: 500px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+  
+    nav ul.active {
+        right: 0;
+    }
+  
+    nav ul li {
+        margin: 10px 0;
+        width: 50%;
+        text-align: center;
+        margin-top: 5px;
+    }
+  
+    nav ul li:first-child {
+        margin: 15px 0;
+        position: absolute;
+        top: 10px;
+        left: 100px;
+    }
+  
+  
+    nav ul li:last-child {
+        margin: 15px 0;
+    }
+  
+    .nav-logo {
+        height: 40px;
+    }
+  
+    nav ul li a {
+      color: #f9f9f9;
+    
+    }
+    
+  nav ul li a:hover{
+    color: #d62142;
+  }
+  
+  nav ul li button:hover {
+      cursor: pointer !important;
+      color: #d62142;
+  }
+  
+  
+      /* Hide other nav items by default in mobile view */
+      nav ul li:not(:first-child) {
+        display: none;
+    }
+  
+    /* Show nav items when menu is active */
+    nav ul.active li {
+        display: block;
+    }
+  }
+  

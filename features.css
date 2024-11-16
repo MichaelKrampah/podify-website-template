@@ -16,7 +16,7 @@ body {
 nav {
     margin-top: 0; 
     padding-top: 10px; 
-    position: relative;
+    position: sticky;
     top: 0;
     width: 100%; 
     background-color: #012a39; 
@@ -26,17 +26,16 @@ nav {
     height: 50px;
     width: auto;
     background-color: transparent;
-    margin-left: -100px;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
-    margin-top: 10px;
+    padding: 0 1rem;
+    list-style: none;
 }
 
 nav ul li {
@@ -58,6 +57,7 @@ nav ul li a {
     font-weight: bold;
     font-size: 18px;
     padding: 8px 12px;
+    transition: color 0.3s ease;
 }
 
 button{
@@ -88,7 +88,7 @@ nav ul li a:hover{
     color: white;
     text-align: center;
     overflow: hidden;
-    padding: 40px 0px;
+    padding: 2rem 1rem;
     z-index: 1;
     width: 100%;
   }
@@ -106,10 +106,10 @@ nav ul li a:hover{
 }
   
 .active-podcasters h1 {
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 4vw, 3rem);
     font-weight: bold;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
   
 .podcasters-scroll {
@@ -141,7 +141,8 @@ nav ul li a:hover{
 
 .podcaster img {
     width: 100%;
-    height: 180px;
+    height: clamp(120px, 30vw, 180px);
+    object-fit: cover;
     border-radius: 10px;
   }
   
@@ -157,36 +158,33 @@ nav ul li a:hover{
   .recent-releases {
     background-color: white;
     color: #333;
-    padding: 40px 20px;
+    padding: 2rem 1rem;
     text-align: center;
   }
   
   .recent-releases h2 {
-    font-size: 2.0rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
   }
   
   .categories {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.75rem;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
   
   .categories span {
     background-color: #f0f0f0;
-    padding: 8px 12px;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
   }
   
   .episodes {
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; */
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -206,13 +204,13 @@ nav ul li a:hover{
     position: relative;
     display: flex;
     flex-direction: column;
-
-    
+    height: 100%;
   }
   
   .episode-card img {
     width: 100%;
-    height: 600px;
+    height: clamp(200px, 50vw, 600px);
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
   }
@@ -252,7 +250,8 @@ nav ul li a:hover{
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 9999;
-  width: 400px;
+  width: min(90%, 400px);
+  margin: 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -329,3 +328,139 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 
+
+
+/* Burger Menu Button */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 5px;
+  right: 40px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  position: static;
+
+}
+
+.burger-menu i {
+  color:#f9f9f9;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+
+.burger-menu.active i {
+  transform: rotate(90deg);
+}
+
+
+/* Responsive Media Queries */
+@media screen and (max-width: 480px){
+.active-podcasters{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.podcasters-scroll{
+  display: flex;
+  flex-direction: column;
+}
+
+.episodes{
+  display: flex;
+  flex-direction: column;
+}
+
+.episode-card{
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+.form-popup{
+  width: 80%;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .burger-menu {
+      display: block !important;
+  }
+
+  nav ul {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 200px;
+      height: 100vh;
+      margin: 0;
+      padding-top: 100px;
+      padding-bottom: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: right 0.3s ease;
+      z-index: 999;
+  }
+
+  nav ul.active {
+      right: 0;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+      width: 50%;
+      text-align: center;
+      margin-top: 5px;
+  }
+
+  nav ul li:first-child {
+      margin: 15px 0;
+      position: absolute;
+      top: 10px;
+      left: 50px;
+  }
+
+
+  nav ul li:last-child {
+      margin: 15px 0;
+  }
+
+  .nav-logo {
+      height: 40px;
+  }
+
+  nav ul li a {
+    color: #f9f9f9;
+  
+  }
+  
+nav ul li a:hover{
+  color: #d62142;
+}
+
+nav ul li button:hover {
+    cursor: pointer !important;
+    color: #d62142;
+}
+
+
+    /* Hide other nav items by default in mobile view */
+    nav ul li:not(:first-child) {
+      display: none;
+  }
+
+  /* Show nav items when menu is active */
+  nav ul.active li {
+      display: block;
+  }
+}

@@ -258,3 +258,130 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 
+/* Burger Menu Button */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 5px;
+  right: 40px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  position: static;
+}
+
+.burger-menu i {
+  color:#012a39;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+
+.burger-menu.active i {
+  transform: rotate(90deg);
+}
+
+
+/* Responsive Media Queries */
+@media screen and (max-width: 480px){
+ .container{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .episode{
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .episode-item{
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+ }
+ 
+ 
+ .form-popup{
+   width: 80%;
+ }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .burger-menu {
+      display: block !important;
+  }
+
+  nav ul {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 200px;
+      height: 100vh;
+      margin: 0;
+      padding-top: 100px;
+      padding-bottom: 350px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: right 0.3s ease;
+      z-index: 999;
+  }
+
+  nav ul.active {
+      right: 0;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+      width: 50%;
+      text-align: center;
+      margin-top: 5px;
+  }
+
+  nav ul li:first-child {
+      margin: 15px 0;
+      position: absolute;
+      top: 5px;
+      left: 110px;
+  }
+
+
+  nav ul li:last-child {
+      margin: 15px 0;
+  }
+
+  .nav-logo {
+      height: 40px;
+  }
+
+  nav ul li a {
+    color:#012a39;
+  
+  }
+  
+  nav ul li a:hover{
+    color: #d62142;
+  }
+  
+  nav ul li button:hover {
+      cursor: pointer !important;
+      color: #d62142;
+  }
+  
+  
+    /* Hide other nav items by default in mobile view */
+    nav ul li:not(:first-child) {
+      display: none;
+  }
+
+  /* Show nav items when menu is active */
+  nav ul.active li {
+      display: block;
+  }
+}
+
